@@ -1,6 +1,6 @@
 // src/App.js
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import { LogProvider } from './components/LogContext'; // Import the LogProvider
 import FileUpload from './components/FileUpload';
 import ShowLogFile from './components/Analyze';
@@ -14,7 +14,7 @@ import Download from './components/Download';
 const App = () => {
   return (
     <LogProvider>
-      <Router>
+      <HashRouter>
         <Dashboard />
         <Routes>
           <Route path="/" element={<FileUpload />} />
@@ -25,7 +25,7 @@ const App = () => {
           <Route path='/viewlog' element={<ViewLog/>}/>
           <Route path='download' element={<Download/>}/>
         </Routes>
-      </Router>
+      </HashRouter>
     </LogProvider>
   );
 };

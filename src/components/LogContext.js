@@ -13,6 +13,7 @@ export const LogProvider = ({ children }) => {
   );
 };
 
+
 export const useLog = () => {
   return useContext(LogContext);
 };
